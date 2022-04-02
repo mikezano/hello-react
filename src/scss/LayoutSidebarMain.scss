@@ -11,8 +11,22 @@
     height: inherit;
     background-color: hsla(0, 100%, 100%, 0.95);
     width: 16rem;
-
     border-right: 1px solid var(--zano-gray);
+
+    &.move-enter-active,
+    &.move-exit-active {
+      transition: all 0.5s ease;
+    }
+    &.move-exit-active,
+    &.move-exit-done,
+    &.move-enter {
+      transform: translateX(-16rem);
+    }
+
+    &.move-enter-active,
+    &.move-enter-done {
+      transform: translateX(0);
+    }
   }
 
   &__hide-sidebar,
@@ -23,6 +37,20 @@
 
   &__hide-sidebar {
     transform: translateX(16rem);
+    &.move-enter-active,
+    &.move-exit-active {
+      transition: all 0.5s ease;
+    }
+    &.move-exit-active,
+    &.move-exit-done,
+    &.move-enter {
+      transform: translateX(1rem);
+    }
+
+    &.move-enter-active,
+    &.move-enter-done {
+      transform: translateX(16rem);
+    }
   }
 
   &__show-sidebar {
