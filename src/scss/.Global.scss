@@ -9,3 +9,10 @@
   --animation-speed-1x: 0.5s;
   --animation-speed-2x: 0.2s;
 }
+
+.hello-world {
+  width: 500px;
+  height: 500px;
+  padding: 1rem;
+  border: 1px solid var(--zano-gray);
+}
