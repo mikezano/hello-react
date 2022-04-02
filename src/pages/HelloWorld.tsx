@@ -7,12 +7,16 @@ export const HelloWorld = () => {
   };
   return (
     <div className="hello-world">
-      <Dropdown
-        items={["a", "b", "c", "d"]}
-        name={"Hello"}
-        onSelectItem={selectItem}
+      <LayoutSidebarMain
+        sidebar={
+          <Dropdown
+            items={["a", "b", "c", "d"]}
+            name={"Hello"}
+            onSelectItem={selectItem}
+          />
+        }
+        main={<h1>Main</h1>}
       />
-      <LayoutSidebarMain sidebar={<div>Sidebar</div>} main={<h1>Main</h1>} />
     </div>
   );
 };
