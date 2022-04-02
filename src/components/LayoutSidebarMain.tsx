@@ -19,7 +19,7 @@ export const LayoutSidebarMain = ({ sidebar, main }: DropdownProps) => {
             className="layout__hide-sidebar"
             onClick={() => setIsShowingSidebar(false)}
           >
-            Hide
+            <span className="oi" data-glyph="arrow-thick-left"></span>
           </button>
         </>
       )}
@@ -29,7 +29,7 @@ export const LayoutSidebarMain = ({ sidebar, main }: DropdownProps) => {
           className="layout__show-sidebar"
           onClick={() => setIsShowingSidebar(true)}
         >
-          Show
+          <span className="oi" data-glyph="menu"></span>
         </button>
       )}
 

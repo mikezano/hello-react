@@ -2,6 +2,8 @@ import { Switch, Route, Router, Link } from "react-router-dom";
 import { Button } from "./Button";
 import { HelloWorld } from "./pages/HelloWorld";
 import "./scss/.Global.scss";
+import "open-iconic/font/css/open-iconic.scss";
+
 
 const helloReact = () => <div>Hello React!</div>;
 
