@@ -1,11 +1,16 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { useParams } from "react-router-dom";
 import { Card } from "../components/Card";
-import { Dropdown } from "../components/Dropdown";
-import { DropdownCheckbox } from "../components/DropdownCheckbox";
-
 import { Dropdowns } from "../component-examples/Dropdowns";
 import { IComponentExampleConfiguration } from "../interface/ComponentExamples";
+import "../scss/Components.scss";
+
+interface ComponenProps {
+  description: string;
+  jsx: JSX.Element;
+  title: string;
+  type: string;
+}
 
 interface ComponentRouteParams {
   type: string;
@@ -21,12 +26,17 @@ export const Components = () => {
   let { type } = useParams<ComponentRouteParams>();
 
   return (
-    <>
-      <h1>This is for {type}</h1>
-
-      {Dropdowns.map((dropdown: IComponentExampleConfiguration) => (
-        <Card component={dropdown.jsx}></Card>
-      ))}
-    </>
+    <div className="components">
+      <h1 className="components__header">This is for {type}</h1>
+      <div className="components__examples">
+        {Dropdowns.map((dropdown: IComponentExampleConfiguration) => (
+          <Card
+            component={dropdown.jsx}
+            description={dropdown.description}
+            title={dropdown.title}
+          ></Card>
+        ))}
+      </div>
+    </div>
   );
 };

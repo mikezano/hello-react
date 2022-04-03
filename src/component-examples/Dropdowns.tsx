@@ -4,7 +4,7 @@ import { IComponentExampleConfiguration } from "../interface/ComponentExamples";
 
 export const Dropdowns: IComponentExampleConfiguration[] = [
   {
-    description: "Description",
+    description: "Classic dropdown",
     jsx: (
       <Dropdown
         items={["a", "b", "c", "d"]}
@@ -14,7 +14,7 @@ export const Dropdowns: IComponentExampleConfiguration[] = [
         }}
       />
     ),
-    title: "Title",
+    title: "Basic Dropdown",
     type: "Type",
   },
   {
@@ -28,7 +28,7 @@ export const Dropdowns: IComponentExampleConfiguration[] = [
         }}
       />
     ),
-    title: "Title",
+    title: "Checkbox Dropdown",
     type: "Type",
   },
 ];
